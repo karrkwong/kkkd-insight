@@ -1,6 +1,6 @@
 # K5K3D
 
-K5K3D is a writing skill for producing formal Chinese product judgment documents using the `5 Looks + 3 Decisions` framework.
+K5K3D is a writing skill for producing formal product judgment documents using the `5 Looks + 3 Decisions` framework.
 
 It is designed for product direction analysis, opportunity assessment, scope narrowing, and go/no-go style decision documents. It is not meant for generic PRDs, simple market overviews, or feature list roundups.
 
@@ -53,7 +53,7 @@ It is suitable for two common workflows:
 
 This skill enforces the following output behavior:
 
-- formal written Chinese, not conversational writing
+- formal written output, not conversational writing
 - title format: `<topic>_Opportunity Insights`
 - `Executive Summary` must come first
 - the main body must follow `5 Looks` and `3 Decisions`
