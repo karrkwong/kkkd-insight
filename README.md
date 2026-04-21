@@ -1,117 +1,140 @@
 # K5K3D
 
-面向产品判断书的中文写作 skill。它用于围绕某个功能、场景、技术或产品方向，按 `5看3定` 框架输出正式中文的机会判断文档。
+K5K3D is a writing skill for producing formal Chinese product judgment documents using the `5 Looks + 3 Decisions` framework.
 
-仓库内的 skill 适合两类任务：
+It is designed for product direction analysis, opportunity assessment, scope narrowing, and go/no-go style decision documents. It is not meant for generic PRDs, simple market overviews, or feature list roundups.
 
-- 从零启动某个命题的研究，并最终收敛成一份可执行的产品判断书
-- 基于已有研究材料、VOC 摘要、竞品分析或会议纪要，快速完成判断收束
+## What It Does
 
-## 它解决什么问题
+This skill helps turn scattered research into a decision-oriented document with:
 
-很多产品分析最终会退化成三种低效结果：
+- a clear recommendation up front
+- structured reasoning through `5 Looks`
+- execution guidance through `3 Decisions`
+- explicit handling of assumptions, evidence gaps, and next validation steps
 
-- 材料很多，但没有明确判断
-- 竞品罗列很多，但没有取舍
-- 结论看起来完整，但证据边界和执行动作不清楚
+It is suitable for two common workflows:
 
-`K5K3D` 的目标是把分析文档稳定约束为：
+- starting from scratch and doing the minimum required research before writing
+- taking existing research materials and converging them into a final judgment
 
-- 先给结论
-- 再展开 `5看`
-- 最后落到 `3定`
-- 所有推测、假设、证据缺口统一沉到附录
+## Best Use Cases
 
-## 适用场景
+- Assess whether an AI capability should enter a product roadmap
+- Evaluate a new product direction or opportunity area
+- Narrow scope before MVP definition
+- Convert research notes, VOC summaries, and competitor findings into an executable decision memo
 
-- 分析某个 AI 功能是否值得进入产品路线
-- 围绕一个新场景输出方向判断书
-- 在立项前做范围收敛、优先级判断、MVP 路线选择
-- 对已有研究材料做结构化决策收束
+## Not Suitable For
 
-## 不适用场景
+- generic PRDs
+- requirement specifications
+- broad industry reports
+- pure competitor listings
+- strategy writing without evidence
 
-- 通用 PRD
-- 普通行业综述
-- 纯竞品清单
-- 没有证据支撑的泛战略写作
+## Core Framework
 
-## 核心框架
+### 5 Looks
 
-### 5看
+- Look at the industry
+- Look at the users
+- Look at the competition
+- Look at the opportunity
+- Look at yourself
 
-- `看行业`
-- `看用户`
-- `看竞争`
-- `看机会`
-- `看自己`
+### 3 Decisions
 
-### 3定
+- Decide control points
+- Decide goals
+- Decide strategy
 
-- `定控制点`
-- `定目标`
-- `定策略`
+## Output Characteristics
 
-## 输出特点
+This skill enforces the following output behavior:
 
-- 使用正式中文
-- 标题统一为 `<命题名称>_机会洞察`
-- 第一部分必须是 `执行摘要`
-- 正文只保留已证实内容
-- 推测、假设、证据缺口统一写入附录 `备注项`
-- 至少包含一张对比表或判断矩阵
-- `看用户` 强制包含：
-  - VOC
-  - 场景链路
-  - 基准标准
-  - 用户场景旅程表
-  - Mermaid 场景旅程流程图
-- `看竞争` 强制包含核心对标对象截图，每家不少于 2 张
+- formal written Chinese, not conversational writing
+- title format: `<topic>_Opportunity Insights`
+- `Executive Summary` must come first
+- the main body must follow `5 Looks` and `3 Decisions`
+- the conclusion must be actionable
+- at least one comparison table or judgment matrix must appear
+- dividers must be inserted between heading levels for readability
+- AI sections must describe capability boundaries, trigger logic, input/output, Agent-Skill split, and cost constraints
+- assumptions, guesses, and evidence gaps must be moved to the appendix instead of being mixed into the main body
 
-## 工作方式
+## User and Competition Requirements
 
-这个 skill 支持两种模式：
+### User Section Must Include
 
-### 1. 从零研究模式
+- VOC
+- scenario chain
+- benchmark standards
+- a user journey table
+- a matching Mermaid journey flow diagram
 
-当用户只给命题，没有足够材料时：
+### Competition Section Must Include
 
-- 先补齐行业、用户、竞争的最小必要研究
-- 再输出判断书
+- direct competitors
+- substitutes and default alternatives
+- comparison beyond feature count
+- at least 2 UI screenshots for each core benchmark product
 
-### 2. 材料收敛模式
+## Working Modes
 
-当用户已经给出研究材料、VOC 摘要或竞品分析时：
+### 1. Research-First Mode
 
-- 先做证据分层
-- 再做判断收束
+Use this when the user only provides a topic or a direction.
 
-## 文档结构
+Expected behavior:
 
-标准结构如下：
+- complete the minimum necessary research for industry, users, and competition
+- then write the final judgment document
 
-1. `执行摘要`
-2. `5看`
-3. `3定`
-4. `结论与下一步`
-5. `附录`
+### 2. Material-Convergence Mode
 
-仓库中的 [references/output_template.md](./references/output_template.md) 给出了固定模板。
+Use this when the user already provides research materials, VOC summaries, or competitor analysis.
 
-## 证据与写作约束
+Expected behavior:
 
-- 优先使用一手证据和用户已提供材料
-- 不把建议样本量写成已完成样本量
-- 不把推测写成事实
-- 不使用营销式 AI 表述
-- 不使用修辞化对仗句，例如：
-  - “不是 A，而是 B”
-  - “不取决于 A，而取决于 B”
-  - “真实价值点不在 A，而在 B”
+- separate usable evidence from uncertain or missing evidence
+- converge the materials into a decision document
 
-详细口径见 [references/research_standards.md](./references/research_standards.md)。
+## Standard Document Structure
 
-## 仓库结构
+1. Executive Summary
+2. 5 Looks
+3. 3 Decisions
+4. Conclusion and Next Steps
+5. Appendix
+
+See [references/output_template.md](./references/output_template.md) for the template structure.
+
+## Evidence Rules
+
+K5K3D is strict about evidence handling:
+
+- prefer user-provided materials and first-hand evidence
+- do not present suggested sample sizes as completed research
+- do not present guesses as facts
+- keep the main body limited to confirmed conclusions
+- move assumptions, evidence gaps, and follow-up validation needs into the appendix
+
+Detailed standards are documented in [references/research_standards.md](./references/research_standards.md).
+
+## Writing Constraints
+
+This skill explicitly avoids:
+
+- chatty explanation style
+- marketing language for AI
+- weak conclusions such as "everything has value" or "we can keep observing"
+- rhetorical contrast patterns such as:
+  - "not A, but B"
+  - "it does not depend on A, it depends on B"
+  - "the real value is not A, but B"
+
+## Repository Structure
 
 ```text
 K5K3D/
@@ -125,35 +148,31 @@ K5K3D/
     └── research_standards.md
 ```
 
-## 参考文件
+## Reference Files
 
 - [SKILL.md](./SKILL.md)
-  说明 skill 的完整规则、工作流、输出契约和强制要求
+  Full skill definition, workflow, output contract, and required constraints.
 
 - [references/output_template.md](./references/output_template.md)
-  提供最终文档结构模板
+  Canonical output template for the final document.
 
 - [references/research_standards.md](./references/research_standards.md)
-  定义证据等级、VOC、竞品矩阵与机会收敛标准
+  Evidence policy, VOC requirements, competitor matrix rules, and opportunity filtering standards.
 
 - [references/optional_models.md](./references/optional_models.md)
-  提供可选分析模型，例如 `PESTEL`、`Persona`、`CJM`、`SWOT`、`VRIO`
+  Optional supporting models such as `PESTEL`, `Persona`, `CJM`, `SWOT`, and `VRIO`.
 
-## 适合的输出风格
+## Style of Output
 
-这个 skill 更适合产出：
+K5K3D is optimized for documents that are:
 
-- 判断明确
-- 结构稳定
-- 可执行
-- 对证据边界敏感
+- explicit in judgment
+- structurally stable
+- operationally useful
+- evidence-sensitive
 
-而不是：
-
-- 资料堆叠
-- 泛泛建议
-- 漫谈式产品分析
+It is intentionally not optimized for exploratory essays or loosely framed strategy writing.
 
 ## License
 
-当前仓库未单独声明开源许可证；如需公开分发，建议后续补充。
+No explicit open-source license is included yet. Add one later if you want to distribute the skill publicly.
