@@ -1,4 +1,4 @@
 interface:
-  display_name: "k5k3d"
+  display_name: "kkkd-insight"
   short_description: "用5看3定输出正式中文产品判断书"
-  default_prompt: "Use $k5k3d to either research a topic from scratch or synthesize provided materials into a formal 5看3定 product judgment document with evidence tags, prioritization, and a converged recommendation."
+  default_prompt: "Use $kkkd-insight to either research a topic from scratch or synthesize provided materials into a formal 5看3定 product judgment document with evidence tags, prioritization, and a converged recommendation."
