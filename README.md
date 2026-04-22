@@ -1,6 +1,6 @@
-# K5K3D
+# k5k3d
 
-K5K3D is a writing skill for producing formal product judgment documents using the `5 Looks + 3 Decisions` framework.
+k5k3d is a writing skill for producing formal product judgment documents using the `5 Looks + 3 Decisions` framework.
 
 It is designed for product direction analysis, opportunity assessment, scope narrowing, and go/no-go style decision documents. It is not meant for generic PRDs, simple market overviews, or feature list roundups.
 
@@ -112,7 +112,7 @@ See [references/output_template.md](./references/output_template.md) for the tem
 
 ## Evidence Rules
 
-K5K3D is strict about evidence handling:
+k5k3d is strict about evidence handling:
 
 - prefer user-provided materials and first-hand evidence
 - do not present suggested sample sizes as completed research
@@ -137,7 +137,7 @@ This skill explicitly avoids:
 ## Repository Structure
 
 ```text
-K5K3D/
+k5k3d/
 ├── SKILL.md
 ├── README.md
 ├── agents/
@@ -164,7 +164,7 @@ K5K3D/
 
 ## Style of Output
 
-K5K3D is optimized for documents that are:
+k5k3d is optimized for documents that are:
 
 - explicit in judgment
 - structurally stable
