@@ -62,6 +62,7 @@ This skill enforces the following output behavior:
 - dividers must be inserted between heading levels for readability
 - AI sections must describe capability boundaries, trigger logic, input/output, Agent-Skill split, and cost constraints
 - assumptions, guesses, and evidence gaps must be moved to the appendix instead of being mixed into the main body
+- when the topic boundary, target user, output expectation, evidence scope, or business constraints are unclear, the skill should ask clarifying questions before drafting the final document
 
 ## User and Competition Requirements
 
@@ -90,6 +91,7 @@ Expected behavior:
 
 - complete the minimum necessary research for industry, users, and competition
 - then write the final judgment document
+- ask clarifying questions first when the problem framing is still ambiguous
 
 ### 2. Material-Convergence Mode
 
@@ -99,6 +101,7 @@ Expected behavior:
 
 - separate usable evidence from uncertain or missing evidence
 - converge the materials into a decision document
+- ask clarifying questions first if the user intent or judgment boundary is still ambiguous
 
 ## Standard Document Structure
 
