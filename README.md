@@ -25,14 +25,6 @@ It is suitable for two common workflows:
 - Narrow scope before MVP definition
 - Convert research notes, VOC summaries, and competitor findings into an executable decision memo
 
-## Not Suitable For
-
-- generic PRDs
-- requirement specifications
-- broad industry reports
-- pure competitor listings
-- strategy writing without evidence
-
 ## Core Framework
 
 ### 5 Looks
